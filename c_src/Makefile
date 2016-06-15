@@ -13,6 +13,6 @@ all: $(ALL)
 clean:
 	rm -f $(PWD)/c_src/newrelic
 newrelic:
-	gcc -o newrelic main.cc operation_msg.pb.cc $(ELIXIR_COMM_C) $(C_FLAGS) $(LDFLAGS)
+	g++ -o newrelic main.cc operation_msg.pb.cc $(ELIXIR_COMM_C) $(C_FLAGS) $(LDFLAGS)
 install:
 	install $(LIB_DIR)/*.so $(INSTALL_PATH)
